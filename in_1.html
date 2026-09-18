@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For Shreja ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: "DM Sans", sans-serif;
+
+      background:
+        radial-gradient(circle at 15% 20%, #e8f4fd 0%, transparent 28%),
+        radial-gradient(circle at 85% 80%, #d6eaf8 0%, transparent 30%),
+        #f2f9ff;
+
+      overflow: hidden;
+
+      color: #1e2b3a;
+    }
+
+    /* Floating hearts - soft blue */
+
+    .heart {
+      position: fixed;
+
+      color: #8fc3e6;
+
+      font-size: 14px;
+
+      opacity: 0;
+
+      pointer-events: none;
+
+      animation: floatHeart 9s linear infinite;
+    }
+
+    .heart:nth-child(1) {
+      left: 12%;
+      bottom: -20px;
+      animation-delay: 1s;
+    }
+
+    .heart:nth-child(2) {
+      left: 28%;
+      bottom: -20px;
+      animation-delay: 4s;
+    }
+
+    .heart:nth-child(3) {
+      left: 70%;
+      bottom: -20px;
+      animation-delay: 2s;
+    }
+
+    .heart:nth-child(4) {
+      left: 88%;
+      bottom: -20px;
+      animation-delay: 6s;
+    }
+
+    @keyframes floatHeart {
+
+      0% {
+        transform: translateY(0) scale(.8);
+        opacity: 0;
+      }
+
+      15% {
+        opacity: .45;
+      }
+
+      80% {
+        opacity: .25;
+      }
+
+      100% {
+        transform: translateY(-110vh) scale(1.3);
+        opacity: 0;
+      }
+
+    }
+
+    /* Main card - soft blue-white theme */
+
+    .card {
+
+      width: min(680px, 92%);
+
+      padding: 60px 45px;
+
+      text-align: center;
+
+      background: rgba(255,255,255,.88);
+
+      backdrop-filter: blur(18px);
+
+      border-radius: 40px;
+
+      border: 1px solid #c5dcee;
+
+      box-shadow:
+        0 30px 80px rgba(30,60,90,.10),
+        0 8px 25px rgba(58,122,168,.08);
+
+      animation: appear 1s ease;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes appear {
+
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+    /* Small top decoration - soft blue */
+
+    .top-decoration {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 12px;
+
+      color: #4a82b0;
+
+      font-size: 18px;
+
+      margin-bottom: 25px;
+    }
+
+    .line {
+
+      width: 55px;
+
+      height: 1px;
+
+      background: #c5dcee;
+    }
+
+    /* Heart circle - soft blue */
+
+    .heart-circle {
+
+      width: 105px;
+      height: 105px;
+
+      margin: 0 auto 30px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fff,
+          #e6f2fa
+        );
+
+      border: 1px solid #c5dcee;
+
+      box-shadow:
+        0 15px 35px rgba(58,122,168,.13),
+        inset 0 0 20px rgba(255,255,255,.8);
+
+      animation: heartbeat 3s ease-in-out infinite;
+    }
+
+    .heart-circle span {
+
+      font-size: 43px;
+
+      color: #3a7aa8;
+
+    }
+
+    @keyframes heartbeat {
+
+      0%,100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.06);
+      }
+
+    }
+
+    /* Heading */
+
+    h1 {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(3rem, 7vw, 5rem);
+
+      line-height: 1.05;
+
+      font-weight: 500;
+
+      color: #1e2b3a;
+
+      margin-bottom: 18px;
+
+    }
+
+    h1 span {
+
+      color: #3a7aa8;
+
+      font-style: italic;
+
+    }
+
+    /* Romantic message */
+
+    .message {
+
+      max-width: 470px;
+
+      margin: auto;
+
+      color: #5f7488;
+
+      font-size: 1.05rem;
+
+      line-height: 1.9;
+
+    }
+
+    /* Divider - soft blue */
+
+    .divider {
+
+      width: 70px;
+
+      height: 1px;
+
+      background: #c5dcee;
+
+      margin: 30px auto;
+
+      position: relative;
+
+    }
+
+    .divider::after {
+
+      content: "♡";
+
+      position: absolute;
+
+      left: 50%;
+
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      background: white;
+
+      padding: 0 10px;
+
+      color: #3a7aa8;
+
+      font-size: 16px;
+
+    }
+
+    /* Button - soft blue theme */
+
+    .continue-btn {
+
+      border: none;
+
+      background: #1e2b3a;
+
+      color: white;
+
+      padding: 17px 38px;
+
+      border-radius: 50px;
+
+      font-family: "DM Sans", sans-serif;
+
+      font-size: 1rem;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: all .3s ease;
+
+      box-shadow:
+        0 12px 25px rgba(30,43,58,.18);
+
+    }
+
+    .continue-btn:hover {
+
+      transform: translateY(-4px);
+
+      background: #3a7aa8;
+
+      box-shadow:
+        0 16px 30px rgba(58,122,168,.25);
+
+    }
+
+    .continue-btn:active {
+
+      transform: scale(.96);
+
+    }
+
+    /* Bottom */
+
+    .bottom {
+
+      margin-top: 35px;
+
+      padding-top: 22px;
+
+      border-top: 1px solid #c5dcee;
+
+      color: #8ba3b8;
+
+      font-size: .78rem;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+    }
+
+    .progress {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      margin-top: 15px;
+
+    }
+
+    .progress span {
+
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: #c5dcee;
+
+    }
+
+    .progress span:first-child {
+
+      background: #3a7aa8;
+
+    }
+
+    /* Mobile */
+
+    @media(max-width:600px) {
+
+      .card {
+
+        padding: 45px 25px;
+
+        border-radius: 30px;
+
+      }
+
+      .heart-circle {
+
+        width: 90px;
+        height: 90px;
+
+      }
+
+      h1 {
+
+        font-size: 3rem;
+
+      }
+
+      .message {
+
+        font-size: .95rem;
+
+      }
+
+      .continue-btn {
+
+        width: 100%;
+
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating hearts -->
+
+  <div class="heart">♡</div>
+  <div class="heart">♡</div>
+  <div class="heart">♡</div>
+  <div class="heart">♡</div>
+
+
+  <main class="card">
+
+    <div class="top-decoration">
+
+      <span class="line"></span>
+
+      ♡
+
+      <span class="line"></span>
+
+    </div>
+
+
+    <div class="heart-circle">
+
+      <span>♡</span>
+
+    </div>
+
+
+    <h1>
+
+      <span>Shreja</span>
+
+    </h1>
+
+
+    <p class="message">
+
+        Everything beautiful in this world reminds me of you. ❤️
+
+    </p>
+
+
+    <div class="divider"></div>
+
+
+    <button
+      class="continue-btn"
+      id="continueBtn">
+
+      Continue ♡
+
+    </button>
+
+
+    <div class="bottom">
+
+      A little something made for you
+
+      <div class="progress">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <script>
+
+    document
+      .getElementById("continueBtn")
+      .addEventListener("click", function() {
+
+        this.innerHTML = "Opening... ♡";
+
+        this.style.transform = "scale(.97)";
+
+        setTimeout(() => {
+
+          window.location.href = "shreja.html";
+
+        }, 700);
+
+      });
+
+  </script>
+
+</body>
+</html>
